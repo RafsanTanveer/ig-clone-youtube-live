@@ -1,15 +1,20 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import Header from "./components/home/Header";
+import HomeScreen from "./screens/HomeScreen";
+import {SafeAreaView} from 'react-native-safe-area-context'
+
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
+    <SafeAreaView style={styles.container} >
+      <HomeScreen />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "black",
+    flex: 1,
+  },
+});
